@@ -1,0 +1,82 @@
+/* 
+ * This is the main CSS file that holds all the custom CSS.
+ */
+
+#loginBoxHolder	{
+	position: fixed;
+	top : 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	content: " "
+}
+
+#loginBox	{
+	width: 300px;
+	height: 150px;
+	min-width: 200px;
+	min-height : 75px;
+	background : rgb(30, 30, 30);
+	padding: 15px;
+	border-radius: 10px;
+}
+
+#topHeaderBar	{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 25px;
+	background: #808080;
+	color: white;
+}
+
+#topHeaderHolder	{
+	width: 900px;
+}
+
+#topHeaderName	{
+	width: 300px;
+	text-align: right;
+	float: right;
+}
+
+.absCenter	{
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.mediumButton	{
+	width: 100px;
+}
+
+.centerY	{
+	margin: 0 auto;
+}
+
+.inputText	{
+	width: 35%;
+	float: left;
+	height: 40px;
+	padding-top: 10px;
+}
+
+.inputBox	{
+	width: 60%;
+	float: right;
+	height: 40px;
+	padding-top: 10px;
+}
+
+.clearDiv	{
+	clear: both;
+}
+
+.textright	{
+	text-align: right;
+}
