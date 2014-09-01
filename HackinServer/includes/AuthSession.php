@@ -30,7 +30,7 @@
 				//Check the login time and IP.
 				$userCurrentIp = $_SERVER['REMOTE_ADDR'];
 				$result = $db->result($query);
-				if($result->log_ip == $userCurrentIp && (time() - $result->log_time ) <= TOTAL_GAME_TIME)	{
+				if($result->log_ip == $userCurrentIp)	{
 					//A Valid session it is.
 					$this->userIp = $result->user_id;
 					$this->authToken = $authToken;

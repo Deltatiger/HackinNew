@@ -7,5 +7,13 @@
 	
 	$template->setPageTitle('Hackin Index');
 	$template->setPage('index');
+	
+	//We have to load the resources from the server.
+	$resourcesRestCall = new RestCall('localhost/HackinNew/HackinServer/getResources.php', array('authToken' => $authHandler->get('auth_token') ) );
+	$data = $resourcesRestCall->makeRestCall();
+	
+	$jsonData = json_decode($data);
+	
+	
 	$template->loadPage();
 ?>

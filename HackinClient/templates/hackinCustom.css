@@ -42,6 +42,14 @@
 	float: right;
 }
 
+#templatemo_main	{
+	min-height: 300px;
+}
+
+#templatemo_middle	{
+	min-height: 150px;
+}
+
 .absCenter	{
 	margin: auto;
 	position: absolute;
@@ -79,4 +87,8 @@
 
 .textright	{
 	text-align: right;
+}
+
+.centerText	{
+	text-align: center;
 }

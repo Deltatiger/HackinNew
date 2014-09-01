@@ -5,4 +5,7 @@
 	define('CONFIG'				, '`'.$dbName.'`.`t_config`');
 	define('SESSION'			, '`'.$dbName.'`.`t_session`');
 	define('AUTH_DETAIL'		, '`'.$dbName.'`.`authtokendetail`');
+	define('COUNTRIES'			, '`'.$dbName.'`.`countries`');
+	define('RESOURCE_DETAIL'	, '`'.$dbName.'`.`resourcetable`');
+	define('PLAYER_RESOURCE'	, '`'.$dbName.'`.`playerresourcetable`');
 ?>

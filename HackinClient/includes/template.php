@@ -54,7 +54,7 @@ class Template {
     //This function is used to load the whole page where required.
     public function loadPage()  {
 		//First we decide whether the page is an admin page or not.
-		global $session, $user;
+		global $authHandler, $user;
 		
 		//We just set the username for the current session or "Guest"
 		$teamName = $authHandler->get('team_name');

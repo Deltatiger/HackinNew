@@ -34,13 +34,23 @@ function loginChecker()	{
 	});
 }
 
+function loadResourcePage()	{
+	//This functions is used to relaod the resoruce box in the index page.
+	$.post('ajax/getResource.php', {}, function(data)	{
+		var jsonData = JSON.parse(data);
+		if(jsonData.success == true)	{
+			$('#resourceHolder').html(jsonData.content);
+		}
+	});
+}
+
 function pointIncrementer()	{
 	//This function is used to increement the points of the user for every, say, 10 seconds.
 	$.post('ajax/pointInc.php', {increement : "true"}, function(data)	{
-		var jsonData = JSON.parsE(data);
-		if(jsonData.success != true)	{
-			//Some kind of error. 
-			//TODO fix this.
+		var jsonData = JSON.parse(data);
+		if(jsonData.success == true)	{
+			//Reload the resources box.
+			loadResourcePage();
 		}
 	})
 }

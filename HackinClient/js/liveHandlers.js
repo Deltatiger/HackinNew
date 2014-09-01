@@ -15,11 +15,8 @@ $(document).ready(function()	{
 				$('#codeInfoDiv').html('');
 				//Set the username.
 				$('#topHeaderName').html('Welcome, ' + jsonData.username + '!');
-				//Now we start the timer function
-				setInterval(loginChecker, 5000);
-				setInterval(pointIncrementer, 15000);
 			} else {
-				alert("Invalid Login Credentials");
+				alert(jsonData.message);
 			}
 		});
 	});

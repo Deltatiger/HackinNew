@@ -2,8 +2,6 @@
  * This is the main jquery file that is used to handle most of the async things on the pages
  */
 
-var AJAX_PAGE_NAME = 'ajax/user.php';
- 
 $(document).ready(function()	{
 	//First of all things we have to start up the login script checker.
 	$.post('ajax/check_login.php', {checkLogin : "true"}, function(data)	{
@@ -11,10 +9,8 @@ $(document).ready(function()	{
 		var pData = JSON.parse(data);
 		if(pData.login == false)	{
 			loadLoginBox();
-		} else {
-			//Start the timer function.
-			setInterval(loginChecker, 5000);
-			setInterval(pointIncrementer, 15000);
 		}
+		//Set the point incrementer here if required.
+		setInterval(pointIncrementer, 10000);
 	});
 });

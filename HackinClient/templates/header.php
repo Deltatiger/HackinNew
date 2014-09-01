@@ -20,7 +20,7 @@
 		<div id="topHeaderBar">
 			<div id="topHeaderHolder" class="absCenter">
 				<div id="topHeaderName">
-					Welcome, <?php $this->printVar('username'); ?>!
+					Welcome, <?php $this->printVar('team_name'); ?>!
 				</div>
 				<div class="clearDiv"></div>
 			</div>

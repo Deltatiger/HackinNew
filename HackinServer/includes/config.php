@@ -22,8 +22,11 @@
 	//This is the RestCall Class.
 	include_once 'restcall.php';
 	
+	//This is the resource Manager
+	include_once 'resourceHandler.php';
+	
 	//We create all the objects needed for the working.
 	$authSession = new AuthSession( (isset($_POST['auth_token']) ? $_POST['auth_token'] : NULL) );
-
+	
 	//If a page wants to check if the user is logged in / having a valid auth then user isLoggedIn or else die
 ?>

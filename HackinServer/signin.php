@@ -32,6 +32,18 @@
 			//This should be a valid auth token.
 			$jsonRawData['authToken'] = $authToken;
 			$jsonRawData['login'] = true;
+			$jsonRawData['username'] = $username;
+			//We have to check if he already has a country or not.
+			$usernameClean = strtolower($username);
+			$sql = "SELECT `country` FROM ".COUNTRIES.", ".USER_DETAIL." WHERE ".COUNTRIES.".`user_id` = ".USER_DETAIL.".`user_id` AND LOWER(".USER_DETAIL.".`user_name`) = '{$usernameClean}'";
+			$query = $db->query($sql);
+			if($db->numRows($query) > 0)	{
+				$result = $db->result($query);
+				$db->freeResults($query);
+				$jsonRawData['teamCountry'] = $result->country;
+			} else {
+				$jsonRawData['teamCountry'] = getUnusedCountry($username);
+			}
 			break;
 	}
 	 
