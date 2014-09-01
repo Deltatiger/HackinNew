@@ -10,14 +10,12 @@
 	$getResource = new RestCall('localhost/HackinNew/HackinServer/getResouce.php', array('auth_token' => $authHandler->get('auth_token')));
 	$data = $getResource->makeRestCall();
 	$parsedData = json_decode($data);
-	$htmlContent = '';
+	$htmlContent = '<';
 	
 	
 	$jsonReply = array(
 		'success' 		=> true,
 		'content'		=> $htmlData
 	);
-	
-	
 
 ?>

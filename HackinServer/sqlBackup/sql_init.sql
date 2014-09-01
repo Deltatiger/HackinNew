@@ -74,3 +74,19 @@ CREATE TABLE PlayerResourceTable(
 	PRIMARY KEY(`user_id`,`resource_id`)
 );
 
+CREATE TABLE IF NOT EXISTS Notification	(
+	`notification_id`	INT AUTO_INCREMENT NULL,
+	`user_id`			INT,
+	`message`			TEXT,
+	PRIMARY KEY (`notification_id`)
+);
+
+CREATE TABLE IF NOT EXISTS Mail	(
+	`mail_id`			INT NULL AUTO_INCREMENT,
+	`sender_id`			INT,
+	`receiver_id`		INT,
+	`time_stamp`		TIMESTAMP,
+	`message`			TEXT,
+	`viewed`			INT(1),
+	PRIMARY KEY(`mail_id`)
+);

@@ -8,4 +8,6 @@
 	define('COUNTRIES'			, '`'.$dbName.'`.`countries`');
 	define('RESOURCE_DETAIL'	, '`'.$dbName.'`.`resourcetable`');
 	define('PLAYER_RESOURCE'	, '`'.$dbName.'`.`playerresourcetable`');
+	define('NOTIFICATION'		, '`'.$dbName.'`.`Notification`');
+	define('MAIL'				, '`'.$dbName.'`.`Mail`');
 ?>

@@ -13,4 +13,6 @@ $(document).ready(function()	{
 		//Set the point incrementer here if required.
 		setInterval(pointIncrementer, 10000);
 	});
+	
+	$.('#composeMail').on();
 });

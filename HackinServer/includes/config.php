@@ -25,8 +25,10 @@
 	//This is the resource Manager
 	include_once 'resourceHandler.php';
 	
+	include_once 'notification.php';
+	
 	//We create all the objects needed for the working.
 	$authSession = new AuthSession( (isset($_POST['auth_token']) ? $_POST['auth_token'] : NULL) );
-	
+	$notification = new Notification();
 	//If a page wants to check if the user is logged in / having a valid auth then user isLoggedIn or else die
 ?>
